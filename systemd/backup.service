@@ -1,0 +1,10 @@
+[Unit]
+Description=Homelab Infrastructure Automated Backup
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/backup-homelab.sh
+User=root
+StandardOutput=journal
+StandardError=journal

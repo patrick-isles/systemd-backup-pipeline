@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Automated Backup Timer (03:00)
+Requires=backup.service
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+RandomizedDelaySec=60
+
+[Install]
+WantedBy=timers.target
